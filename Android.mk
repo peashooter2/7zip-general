@@ -26,7 +26,6 @@ LOCAL_SRC_FILES := \
     CPP/7zip/Compress/DeflateRegister.cpp \
     CPP/7zip/Compress/DeltaFilter.cpp \
     CPP/7zip/Compress/ImplodeDecoder.cpp \
-    CPP/7zip/Compress/ImplodeHuffmanDecoder.cpp \
     CPP/7zip/Compress/LzfseDecoder.cpp \
     CPP/7zip/Compress/LzhDecoder.cpp \
     CPP/7zip/Compress/Lzma2Decoder.cpp \
@@ -176,6 +175,7 @@ LOCAL_SRC_FILES := \
     CPP/Windows/FileIO.cpp \
     CPP/Windows/FileName.cpp \
     CPP/Windows/PropVariant.cpp \
+    CPP/Windows/PropVariantConv.cpp \
     CPP/Windows/PropVariantUtils.cpp \
     CPP/Windows/Synchronization.cpp \
     CPP/Windows/System.cpp \
@@ -210,12 +210,14 @@ LOCAL_SRC_FILES := \
     CPP/7zip/Archive/PpmdHandler.cpp \
     CPP/7zip/Archive/QcowHandler.cpp \
     CPP/7zip/Archive/RpmHandler.cpp \
+    CPP/7zip/Archive/SparseHandler.cpp
     CPP/7zip/Archive/SplitHandler.cpp \
     CPP/7zip/Archive/SquashfsHandler.cpp \
     CPP/7zip/Archive/SwfHandler.cpp \
     CPP/7zip/Archive/UefiHandler.cpp \
     CPP/7zip/Archive/VdiHandler.cpp \
     CPP/7zip/Archive/VhdHandler.cpp \
+    CPP/7zip/Archive/VhdxHandler.cpp \
     CPP/7zip/Archive/VmdkHandler.cpp \
     CPP/7zip/Archive/XarHandler.cpp \
     CPP/7zip/Archive/XzHandler.cpp \

@@ -7,6 +7,7 @@ add_library(7zip)
 
 # Check makefile in srcdir/CPP/7zip/Archive/7z/makefile
 target_sources(7zip PRIVATE
+    # COMPRESS_OBJS
     CPP/7zip/Compress/Bcj2Coder.cpp
     CPP/7zip/Compress/Bcj2Register.cpp
     CPP/7zip/Compress/BcjCoder.cpp
@@ -19,7 +20,6 @@ target_sources(7zip PRIVATE
     CPP/7zip/Compress/BZip2Decoder.cpp
     CPP/7zip/Compress/BZip2Encoder.cpp
     CPP/7zip/Compress/BZip2Register.cpp
-    CPP/7zip/Compress/CodecExports.cpp
     CPP/7zip/Compress/CopyCoder.cpp
     CPP/7zip/Compress/CopyRegister.cpp
     CPP/7zip/Compress/Deflate64Register.cpp
@@ -28,7 +28,6 @@ target_sources(7zip PRIVATE
     CPP/7zip/Compress/DeflateRegister.cpp
     CPP/7zip/Compress/DeltaFilter.cpp
     CPP/7zip/Compress/ImplodeDecoder.cpp
-    CPP/7zip/Compress/ImplodeHuffmanDecoder.cpp
     CPP/7zip/Compress/LzfseDecoder.cpp
     CPP/7zip/Compress/LzhDecoder.cpp
     CPP/7zip/Compress/Lzma2Decoder.cpp
@@ -60,6 +59,7 @@ target_sources(7zip PRIVATE
     CPP/7zip/Compress/ZlibEncoder.cpp
     CPP/7zip/Compress/ZstdDecoder.cpp
 
+    # CRYPTO_OBJS
     CPP/7zip/Crypto/7zAes.cpp
     CPP/7zip/Crypto/7zAesRegister.cpp
     CPP/7zip/Crypto/HmacSha1.cpp
@@ -75,6 +75,7 @@ target_sources(7zip PRIVATE
     CPP/7zip/Crypto/ZipCrypto.cpp
     CPP/7zip/Crypto/ZipStrong.cpp
 
+    # C_OBJS
     C/7zBuf2.c
     C/7zStream.c
     C/Alloc.c
@@ -129,6 +130,7 @@ target_sources(7zip PRIVATE
     C/Sha512.c
     C/Sha512Opt.c
 
+    # COMMON_OBJS
     CPP/Common/CRC.cpp
     CPP/Common/CrcReg.cpp
     CPP/Common/DynLimBuf.cpp
@@ -137,7 +139,6 @@ target_sources(7zip PRIVATE
     CPP/Common/MyMap.cpp
     CPP/Common/MyString.cpp
     CPP/Common/MyVector.cpp
-    CPP/Common/MyWindows.cpp
     CPP/Common/MyXml.cpp
     CPP/Common/NewHandler.cpp
     CPP/Common/Sha1Prepare.cpp
@@ -156,6 +157,7 @@ target_sources(7zip PRIVATE
     CPP/Common/Sha512Prepare.cpp
     CPP/Common/Sha512Reg.cpp
 
+    # 7ZIP_COMMON_OBJS
     CPP/7zip/Common/CreateCoder.cpp
     CPP/7zip/Common/CWrappers.cpp
     CPP/7zip/Common/InBuffer.cpp
@@ -178,16 +180,20 @@ target_sources(7zip PRIVATE
     CPP/7zip/Common/UniqBlocks.cpp
     CPP/7zip/Common/VirtThread.cpp
 
+    # WIN_OBJS
     CPP/Windows/FileDir.cpp
     CPP/Windows/FileFind.cpp
     CPP/Windows/FileIO.cpp
     CPP/Windows/FileName.cpp
     CPP/Windows/PropVariant.cpp
+    CPP/Windows/PropVariantConv.cpp
     CPP/Windows/PropVariantUtils.cpp
     CPP/Windows/Synchronization.cpp
     CPP/Windows/System.cpp
     CPP/Windows/TimeUtils.cpp
 
+    # AR_OBJS
+    CPP/7zip/Archive/ApfsHandler.cpp
     CPP/7zip/Archive/ApmHandler.cpp
     CPP/7zip/Archive/ArHandler.cpp
     CPP/7zip/Archive/ArjHandler.cpp
@@ -218,20 +224,21 @@ target_sources(7zip PRIVATE
     CPP/7zip/Archive/PpmdHandler.cpp
     CPP/7zip/Archive/QcowHandler.cpp
     CPP/7zip/Archive/RpmHandler.cpp
+    CPP/7zip/Archive/SparseHandler.cpp
     CPP/7zip/Archive/SplitHandler.cpp
     CPP/7zip/Archive/SquashfsHandler.cpp
     CPP/7zip/Archive/SwfHandler.cpp
     CPP/7zip/Archive/UefiHandler.cpp
     CPP/7zip/Archive/VdiHandler.cpp
     CPP/7zip/Archive/VhdHandler.cpp
+    CPP/7zip/Archive/VhdxHandler.cpp
     CPP/7zip/Archive/VmdkHandler.cpp
     CPP/7zip/Archive/XarHandler.cpp
     CPP/7zip/Archive/XzHandler.cpp
     CPP/7zip/Archive/ZHandler.cpp
-    CPP/7zip/Archive/ArchiveExports.cpp
-    CPP/7zip/Archive/DllExports2.cpp
     CPP/7zip/Archive/ZstdHandler.cpp
 
+    # AR_COMMON_OBJS
     CPP/7zip/Archive/Common/CoderMixer2.cpp
     CPP/7zip/Archive/Common/DummyOutStream.cpp
     CPP/7zip/Archive/Common/FindSignature.cpp
@@ -243,6 +250,7 @@ target_sources(7zip PRIVATE
     CPP/7zip/Archive/Common/HandlerOut.cpp
     CPP/7zip/Archive/Common/ParseProperties.cpp
 
+    # 7Z_OBJS
     CPP/7zip/Archive/7z/7zCompressionMode.cpp
     CPP/7zip/Archive/7z/7zDecode.cpp
     CPP/7zip/Archive/7z/7zEncode.cpp
@@ -258,28 +266,34 @@ target_sources(7zip PRIVATE
     CPP/7zip/Archive/7z/7zUpdate.cpp
     CPP/7zip/Archive/7z/7zRegister.cpp
 
+    # CAB_OBJS
     CPP/7zip/Archive/Cab/CabBlockInStream.cpp
     CPP/7zip/Archive/Cab/CabHandler.cpp
     CPP/7zip/Archive/Cab/CabHeader.cpp
     CPP/7zip/Archive/Cab/CabIn.cpp
     CPP/7zip/Archive/Cab/CabRegister.cpp
 
+    # CHM_OBJS
     CPP/7zip/Archive/Chm/ChmHandler.cpp
     CPP/7zip/Archive/Chm/ChmIn.cpp
 
+    # ISO_OBJS
     CPP/7zip/Archive/Iso/IsoHandler.cpp
     CPP/7zip/Archive/Iso/IsoHeader.cpp
     CPP/7zip/Archive/Iso/IsoIn.cpp
     CPP/7zip/Archive/Iso/IsoRegister.cpp
 
+    # NSIS_OBJS
     CPP/7zip/Archive/Nsis/NsisDecode.cpp
     CPP/7zip/Archive/Nsis/NsisHandler.cpp
     CPP/7zip/Archive/Nsis/NsisIn.cpp
     CPP/7zip/Archive/Nsis/NsisRegister.cpp
 
+    # RAR_OBJS
     CPP/7zip/Archive/Rar/RarHandler.cpp
     CPP/7zip/Archive/Rar/Rar5Handler.cpp
 
+    # TAR_OBJS
     CPP/7zip/Archive/Tar/TarHandler.cpp
     CPP/7zip/Archive/Tar/TarHandlerOut.cpp
     CPP/7zip/Archive/Tar/TarHeader.cpp
@@ -288,14 +302,17 @@ target_sources(7zip PRIVATE
     CPP/7zip/Archive/Tar/TarUpdate.cpp
     CPP/7zip/Archive/Tar/TarRegister.cpp
 
+    # UDF_OBJS
     CPP/7zip/Archive/Udf/UdfHandler.cpp
     CPP/7zip/Archive/Udf/UdfIn.cpp
 
+    # WIM_OBJS
     CPP/7zip/Archive/Wim/WimHandler.cpp
     CPP/7zip/Archive/Wim/WimHandlerOut.cpp
     CPP/7zip/Archive/Wim/WimIn.cpp
     CPP/7zip/Archive/Wim/WimRegister.cpp
 
+    # ZIP_OBJS
     CPP/7zip/Archive/Zip/ZipAddCommon.cpp
     CPP/7zip/Archive/Zip/ZipHandler.cpp
     CPP/7zip/Archive/Zip/ZipHandlerOut.cpp
@@ -304,17 +321,37 @@ target_sources(7zip PRIVATE
     CPP/7zip/Archive/Zip/ZipOut.cpp
     CPP/7zip/Archive/Zip/ZipUpdate.cpp
     CPP/7zip/Archive/Zip/ZipRegister.cpp
-
-    CPP/7zip/Archive/Archive2.def
 )
 
-target_compile_definitions(7zip
-    PUBLIC
-        -D_REENTRANT
-        -D_FILE_OFFSET_BITS=64
-        -D_LARGEFILE_SOURCE
-        -DEXTERNAL_CODECS
-        -D_7ZIP_LARGE_PAGES
-        -DUNICODE
-        -D_UNICODE
+
+# CPP/7zip/Bundles/Format7zF/makefile[_gcc].mak
+# CPP/7zip/7zip[_gcc].mak
+
+target_compile_definitions(7zip PRIVATE Z7_EXTERNAL_CODECS)
+target_sources(7zip PRIVATE
+    CPP/7zip/Archive/ArchiveExports.cpp
+    CPP/7zip/Archive/DllExports2.cpp
+    CPP/7zip/Compress/CodecExports.cpp
 )
+if(WIN32)
+    target_compile_definitions(7zip
+        PUBLIC
+            -DUNICODE
+            -D_UNICODE
+    )
+    target_sources(7zip PRIVATE
+        CPP/7zip/Archive/Archive2.def
+    )
+else()
+    target_sources(7zip PRIVATE
+        CPP/Common/MyWindows.cpp
+    )
+endif()
+if(NOT MSVC)
+    target_compile_definitions(7zip
+        PUBLIC
+            -D_REENTRANT
+            -D_FILE_OFFSET_BITS=64
+            -D_LARGEFILE_SOURCE
+    )
+endif()
