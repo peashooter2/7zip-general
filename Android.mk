@@ -210,7 +210,7 @@ LOCAL_SRC_FILES := \
     CPP/7zip/Archive/PpmdHandler.cpp \
     CPP/7zip/Archive/QcowHandler.cpp \
     CPP/7zip/Archive/RpmHandler.cpp \
-    CPP/7zip/Archive/SparseHandler.cpp
+    CPP/7zip/Archive/SparseHandler.cpp \
     CPP/7zip/Archive/SplitHandler.cpp \
     CPP/7zip/Archive/SquashfsHandler.cpp \
     CPP/7zip/Archive/SwfHandler.cpp \
