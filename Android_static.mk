@@ -70,7 +70,6 @@ LOCAL_SRC_FILES := \
     CPP/7zip/Crypto/WzAes.cpp \
     CPP/7zip/Crypto/ZipCrypto.cpp \
     CPP/7zip/Crypto/ZipStrong.cpp \
-    C/7zBuf2.c \
     C/7zStream.c \
     C/Alloc.c \
     C/Bcj2.c \
