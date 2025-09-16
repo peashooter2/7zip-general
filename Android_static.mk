@@ -78,7 +78,6 @@ LOCAL_SRC_FILES := \
     C/Blake2s.c \
     C/Bra.c \
     C/Bra86.c \
-    C/BraIA64.c \
     C/BwtSort.c \
     C/CpuArch.c \
     C/Delta.c \
@@ -130,7 +129,6 @@ LOCAL_SRC_FILES := \
     CPP/Common/LzFindPrepare.cpp \
     CPP/Common/MyMap.cpp \
     CPP/Common/MyString.cpp \
-    CPP/Common/MyVector.cpp \
     CPP/Common/MyWindows.cpp \
     CPP/Common/MyXml.cpp \
     CPP/Common/NewHandler.cpp \
@@ -155,9 +153,7 @@ LOCAL_SRC_FILES := \
     CPP/7zip/Common/InOutTempBuffer.cpp \
     CPP/7zip/Common/FilterCoder.cpp \
     CPP/7zip/Common/LimitedStreams.cpp \
-    CPP/7zip/Common/LockedStream.cpp \
     CPP/7zip/Common/MemBlocks.cpp \
-    CPP/7zip/Common/MethodId.cpp \
     CPP/7zip/Common/MethodProps.cpp \
     CPP/7zip/Common/OffsetStream.cpp \
     CPP/7zip/Common/OutBuffer.cpp \
@@ -188,7 +184,6 @@ LOCAL_SRC_FILES := \
     CPP/7zip/Archive/ComHandler.cpp \
     CPP/7zip/Archive/CpioHandler.cpp \
     CPP/7zip/Archive/CramfsHandler.cpp \
-    CPP/7zip/Archive/DeflateProps.cpp \
     CPP/7zip/Archive/DmgHandler.cpp \
     CPP/7zip/Archive/ElfHandler.cpp \
     CPP/7zip/Archive/ExtHandler.cpp \
@@ -234,8 +229,6 @@ LOCAL_SRC_FILES := \
     CPP/7zip/Archive/Common/OutStreamWithCRC.cpp \
     CPP/7zip/Archive/Common/OutStreamWithSha1.cpp \
     CPP/7zip/Archive/Common/HandlerOut.cpp \
-    CPP/7zip/Archive/Common/ParseProperties.cpp \
-    CPP/7zip/Archive/7z/7zCompressionMode.cpp \
     CPP/7zip/Archive/7z/7zDecode.cpp \
     CPP/7zip/Archive/7z/7zEncode.cpp \
     CPP/7zip/Archive/7z/7zExtract.cpp \

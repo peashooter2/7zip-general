@@ -16,7 +16,6 @@
 #include "../../Crypto/WzAes.h"
 
 #include "../Common/ItemNameUtils.h"
-#include "../Common/ParseProperties.h"
 
 #include "ZipHandler.h"
 #include "ZipUpdate.h"
