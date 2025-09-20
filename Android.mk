@@ -176,9 +176,11 @@ LOCAL_SRC_FILES := \
     CPP/Windows/Synchronization.cpp \
     CPP/Windows/System.cpp \
     CPP/Windows/TimeUtils.cpp \
+    CPP/7zip/Archive/ApfsHandler.cpp \
     CPP/7zip/Archive/ApmHandler.cpp \
     CPP/7zip/Archive/ArHandler.cpp \
     CPP/7zip/Archive/ArjHandler.cpp \
+    CPP/7zip/Archive/AvbHandler.cpp \
     CPP/7zip/Archive/Base64Handler.cpp \
     CPP/7zip/Archive/Bz2Handler.cpp \
     CPP/7zip/Archive/ComHandler.cpp \
@@ -194,6 +196,8 @@ LOCAL_SRC_FILES := \
     CPP/7zip/Archive/HandlerCont.cpp \
     CPP/7zip/Archive/HfsHandler.cpp \
     CPP/7zip/Archive/IhexHandler.cpp \
+    CPP/7zip/Archive/LpHandler.cpp \
+    CPP/7zip/Archive/LvmHandler.cpp \
     CPP/7zip/Archive/LzhHandler.cpp \
     CPP/7zip/Archive/LzmaHandler.cpp \
     CPP/7zip/Archive/MachoHandler.cpp \
@@ -217,9 +221,9 @@ LOCAL_SRC_FILES := \
     CPP/7zip/Archive/XarHandler.cpp \
     CPP/7zip/Archive/XzHandler.cpp \
     CPP/7zip/Archive/ZHandler.cpp \
+    CPP/7zip/Archive/ZstdHandler.cpp \
     CPP/7zip/Archive/ArchiveExports.cpp \
     CPP/7zip/Archive/DllExports2.cpp \
-    CPP/7zip/Archive/ZstdHandler.cpp \
     CPP/7zip/Archive/Common/CoderMixer2.cpp \
     CPP/7zip/Archive/Common/DummyOutStream.cpp \
     CPP/7zip/Archive/Common/FindSignature.cpp \

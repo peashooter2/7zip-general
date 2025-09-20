@@ -194,6 +194,7 @@ target_sources(7zip PRIVATE
     CPP/7zip/Archive/ApmHandler.cpp
     CPP/7zip/Archive/ArHandler.cpp
     CPP/7zip/Archive/ArjHandler.cpp
+    CPP/7zip/Archive/AvbHandler.cpp
     CPP/7zip/Archive/Base64Handler.cpp
     CPP/7zip/Archive/Bz2Handler.cpp
     CPP/7zip/Archive/ComHandler.cpp
@@ -209,6 +210,8 @@ target_sources(7zip PRIVATE
     CPP/7zip/Archive/HandlerCont.cpp
     CPP/7zip/Archive/HfsHandler.cpp
     CPP/7zip/Archive/IhexHandler.cpp
+    CPP/7zip/Archive/LpHandler.cpp
+    CPP/7zip/Archive/LvmHandler.cpp
     CPP/7zip/Archive/LzhHandler.cpp
     CPP/7zip/Archive/LzmaHandler.cpp
     CPP/7zip/Archive/MachoHandler.cpp
