@@ -243,7 +243,6 @@ LOCAL_SRC_FILES := \
     CPP/7zip/Archive/7z/7zIn.cpp \
     CPP/7zip/Archive/7z/7zOut.cpp \
     CPP/7zip/Archive/7z/7zProperties.cpp \
-    CPP/7zip/Archive/7z/7zSpecStream.cpp \
     CPP/7zip/Archive/7z/7zUpdate.cpp \
     CPP/7zip/Archive/7z/7zRegister.cpp \
     CPP/7zip/Archive/Cab/CabBlockInStream.cpp \
